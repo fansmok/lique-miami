@@ -109,11 +109,11 @@ export function MenuSection() {
                 />
                 {/* Gradient Overlays */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0D] via-[#0B0B0D]/60 to-transparent" />
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.accent} opacity-0 transition-opacity duration-500 group-hover:opacity-100`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${item.accent} opacity-100 transition-opacity duration-500 lg:opacity-0 lg:group-hover:opacity-100`} />
               </div>
 
               {/* Hover Glow Effect */}
-              <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+              <div className="pointer-events-none absolute inset-0 opacity-100 transition-opacity duration-500 lg:opacity-0 lg:group-hover:opacity-100">
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-[#B49567]/40" />
               </div>
 
@@ -121,16 +121,16 @@ export function MenuSection() {
               <div className="relative flex h-full flex-col justify-between p-6">
                 {/* Top - Icon Badge */}
                 <div className="flex justify-between">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-[#0B0B0D]/60 backdrop-blur-md transition-all duration-300 group-hover:border-[#B49567]/50 group-hover:bg-[#B49567]/20">
-                    <item.icon className="h-5 w-5 text-[#F2EDE5] transition-colors group-hover:text-[#B49567]" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-[#B49567]/20 backdrop-blur-md transition-all duration-300 lg:bg-[#0B0B0D]/60 lg:group-hover:border-[#B49567]/50 lg:group-hover:bg-[#B49567]/20">
+                    <item.icon className="h-5 w-5 text-[#B49567] transition-colors lg:text-[#F2EDE5] lg:group-hover:text-[#B49567]" />
                   </div>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0B0B0D]/60 opacity-0 backdrop-blur-md transition-all duration-300 group-hover:opacity-100">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#0B0B0D]/60 opacity-100 backdrop-blur-md transition-all duration-300 lg:opacity-0 lg:group-hover:opacity-100">
                     <ExternalLink className="h-4 w-4 text-[#F2EDE5]" />
                   </div>
                 </div>
 
                 {/* Bottom - Text */}
-                <div className="transform transition-transform duration-300 group-hover:translate-y-[-4px]">
+                <div className="transform transition-transform duration-300 translate-y-[-4px] lg:translate-y-0 lg:group-hover:translate-y-[-4px]">
                   <h3 className="mb-2 font-serif text-2xl font-medium text-[#F2EDE5] drop-shadow-lg">
                     {item.title}
                   </h3>
@@ -139,7 +139,7 @@ export function MenuSection() {
                   </p>
                   
                   {/* View Menu Button */}
-                  <div className="mt-4 inline-flex translate-y-4 items-center gap-2 rounded-full border border-[#B49567] bg-[#B49567] px-5 py-2.5 text-[#0B0B0D] opacity-0 shadow-lg shadow-[#B49567]/25 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <div className="mt-4 inline-flex translate-y-0 items-center gap-2 rounded-full border border-[#B49567] bg-[#B49567] px-5 py-2.5 text-[#0B0B0D] opacity-100 shadow-lg shadow-[#B49567]/25 transition-all duration-300 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100">
                     <span className="text-sm font-semibold tracking-wide">View Menu</span>
                     <ExternalLink className="h-4 w-4" />
                   </div>
