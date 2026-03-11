@@ -271,9 +271,10 @@ export function HeroSection() {
           {/* Video Element with CSS Filters */}
           <video
             autoPlay
-            muted
             loop
+            muted
             playsInline
+            webkit-playsinline="true"
             className="h-full w-full object-cover saturate-[0.85] contrast-[1.1] brightness-[0.9]"
           >
             <source
