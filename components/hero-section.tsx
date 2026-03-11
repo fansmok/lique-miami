@@ -202,14 +202,6 @@ export function HeroSection() {
                   {link.label}
                 </a>
               ))}
-              <Button
-                asChild
-                className="mt-2 w-full bg-[#183247] text-[#F2EDE5] hover:bg-[#1e3f59]"
-              >
-                <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
-                  Reserve a Table
-                </a>
-              </Button>
             </div>
           </div>
         )}
@@ -244,7 +236,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-[#183247] px-8 py-6 text-sm font-medium uppercase tracking-widest text-[#F2EDE5] hover:bg-[#1e3f59]"
+                className="hidden bg-[#183247] px-8 py-6 text-sm font-medium uppercase tracking-widest text-[#F2EDE5] hover:bg-[#1e3f59] sm:inline-flex"
               >
                 <a href="#contact">Reserve a Table</a>
               </Button>
