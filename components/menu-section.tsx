@@ -104,6 +104,7 @@ export function MenuSection() {
                 <img
                   src={item.image}
                   alt={item.title}
+                  loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Gradient Overlays */}

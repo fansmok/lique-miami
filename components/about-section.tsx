@@ -93,6 +93,7 @@ export function AboutSection() {
                 <img
                   src={venueImage}
                   alt="LIQUE Miami Venue"
+                  loading="lazy"
                   className="h-full w-full object-cover pointer-events-none"
                   draggable={false}
                 />

@@ -134,6 +134,7 @@ export function ReviewsSection() {
                 <img
                   src={feature.image}
                   alt={feature.title}
+                  loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0D] via-[#0B0B0D]/60 to-[#0B0B0D]/20" />
