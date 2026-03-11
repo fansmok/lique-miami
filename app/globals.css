@@ -1,0 +1,139 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* LIQUE Miami Premium Color Palette */
+:root {
+  /* Core backgrounds */
+  --background: #0B0B0D;
+  --background-alt: #151214;
+  --foreground: #F2EDE5;
+  
+  /* Card / surface */
+  --card: #2A1F1D;
+  --card-foreground: #F2EDE5;
+  
+  /* Popover */
+  --popover: #2A1F1D;
+  --popover-foreground: #F2EDE5;
+  
+  /* Primary CTA - Midnight Sapphire */
+  --primary: #183247;
+  --primary-foreground: #F2EDE5;
+  
+  /* Secondary - Walnut Veil */
+  --secondary: #5E473D;
+  --secondary-foreground: #F2EDE5;
+  
+  /* Muted - Smoke Taupe */
+  --muted: #2A1F1D;
+  --muted-foreground: #8D7C73;
+  
+  /* Accent - Champagne Bronze */
+  --accent: #B49567;
+  --accent-foreground: #0B0B0D;
+  
+  /* Destructive */
+  --destructive: #7f1d1d;
+  --destructive-foreground: #F2EDE5;
+  
+  /* Border / Input */
+  --border: rgba(242, 237, 229, 0.14);
+  --input: rgba(242, 237, 229, 0.14);
+  --ring: #B49567;
+  
+  /* Charts */
+  --chart-1: #183247;
+  --chart-2: #B49567;
+  --chart-3: #5E473D;
+  --chart-4: #8D7C73;
+  --chart-5: #2A1F1D;
+  
+  --radius: 0.5rem;
+  
+  /* Custom LIQUE tokens */
+  --onyx: #0B0B0D;
+  --ivory: #F2EDE5;
+  --ivory-secondary: #C9BFB5;
+  --walnut: #5E473D;
+  --sapphire: #183247;
+  --bronze: #B49567;
+  --taupe: #8D7C73;
+  --cocoa: #2A1F1D;
+}
+
+.dark {
+  --background: #0B0B0D;
+  --background-alt: #151214;
+  --foreground: #F2EDE5;
+  --card: #2A1F1D;
+  --card-foreground: #F2EDE5;
+  --popover: #2A1F1D;
+  --popover-foreground: #F2EDE5;
+  --primary: #183247;
+  --primary-foreground: #F2EDE5;
+  --secondary: #5E473D;
+  --secondary-foreground: #F2EDE5;
+  --muted: #2A1F1D;
+  --muted-foreground: #8D7C73;
+  --accent: #B49567;
+  --accent-foreground: #0B0B0D;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #F2EDE5;
+  --border: rgba(242, 237, 229, 0.14);
+  --input: rgba(242, 237, 229, 0.14);
+  --ring: #B49567;
+}
+
+@theme inline {
+  --font-sans: var(--font-sans), 'Inter', system-ui, sans-serif;
+  --font-serif: var(--font-serif), 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'Geist Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

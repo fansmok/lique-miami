@@ -1,0 +1,27 @@
+# LIQUE Miami
+Waterfront restaurant and lounge
+
+> LIQUE Miami is a premium waterfront restaurant and lounge offering refined dining, craft cocktails, and a vibrant evening atmosphere in North Miami Beach.
+
+## Business Details
+
+- **Name:** LIQUE Miami
+- **Type:** Waterfront restaurant and lounge
+- **Address:** 3957 NE 163rd St, North Miami Beach, FL 33160
+- **Phone:** +1-305-705-2425
+
+## Site Structure
+
+- **/** (Homepage)
+- **/#about** (About the venue)
+- **/#menu** (Restaurant menu)
+- **/#reviews** (Guest reviews)
+- **/#contact** (Contact and reservations)
+
+## Keywords
+
+- Lique Miami
+- Miami waterfront restaurant
+- North Miami Beach restaurant
+- Luxury dining Miami
+- Miami waterfront lounge
