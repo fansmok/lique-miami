@@ -14,11 +14,11 @@ export function FloatingReserveButton() {
     const handleScroll = () => {
       const isPastThreshold = window.scrollY > 600
       
-      // Target the contact section so the button vanishes when it's in view or we've scrolled past it
-      const contactSectionEl = document.getElementById('contact')
-      if (contactSectionEl) {
-        const rect = contactSectionEl.getBoundingClientRect()
-        // Determine if contact section is visible on screen or above it
+      // Target the 'Reserve Your Table' header so the button vanishes when the form begins or when we're past it
+      const formHeaderEl = document.getElementById('reservation-form-header')
+      if (formHeaderEl) {
+        const rect = formHeaderEl.getBoundingClientRect()
+        // Determine if the header has entered the screen (or we are scrolled past it)
         currentContactVisible = rect.top <= window.innerHeight
       }
       
