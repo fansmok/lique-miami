@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -43,7 +43,33 @@ function getTodayHours() {
 
 export function HeroSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const todayHours = getTodayHours()
+
+  useEffect(() => {
+    // Attempt to forcefully play the video
+    // iOS Low Power Mode stops standard autoplay, but we can trigger it via script
+    // and if that fails, we bind a one-time touch listener to start it on the first tap.
+    const videoElem = videoRef.current
+    if (!videoElem) return
+
+    const tryPlay = () => {
+      videoElem.play().catch((err) => {
+        // AbortError or NotAllowedError means the browser blocked it (Low Power Mode or Data Saver)
+        console.log('Video autoplay blocked, waiting for interaction:', err)
+        // Wait for first touch anywhere on screen to play it
+        const playOnInteraction = () => {
+          videoElem.play()
+          document.removeEventListener('touchstart', playOnInteraction)
+          document.removeEventListener('click', playOnInteraction)
+        }
+        document.addEventListener('touchstart', playOnInteraction, { once: true, passive: true })
+        document.addEventListener('click', playOnInteraction, { once: true, passive: true })
+      })
+    }
+
+    tryPlay()
+  }, [])
 
   return (
     <section id="hero" className="relative w-full">
@@ -270,6 +296,7 @@ export function HeroSection() {
         <div className="relative order-1 h-[50vh] w-full lg:order-2 lg:h-auto lg:w-1/2">
           {/* Video Element with CSS Filters */}
           <video
+            ref={videoRef}
             autoPlay
             loop
             muted
